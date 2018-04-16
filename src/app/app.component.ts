@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyApp latest Again';
+  months = ['Jan' , 'Feb' , 'March' , 'April' , 'May' , 'June' , 'July' , 'Aug' , 'Sep', 'Oct', 'Nov' , 'Dec'];
 }
