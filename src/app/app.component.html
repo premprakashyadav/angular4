@@ -1,8 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1 appChangeText>
-    Welcome to {{ title }}!
+    Welcome to {{ title | lowercase }}!
   </h1>
+  <h2>currency Pipe</h2>
+  <b>{{6625|currency:'USD'}}</b>
+  <b>{{5854|currency:'USD':true}}</b>
+
+  <h2>Date Pipe</h2>
+  <b>{{todaydate|date:'d/M/y'}}</b>
+  <b>{{todaydate|date:'shortTime'}}</b>
+
+  <h2>Decimal Pipe</h2>
+  <b>{{14.78787814|number:'3.4-4'}}</b>
+
+  <div style = "width:40%;float:left;border:solid 1px black;">
+    <h4>Json Pipe</h4>
+    <b>{{jsonVal|json}}</b>
+    <h4>Percent Pipe</h4>
+    <b>{{00.565656 | percent}}</b>
+    <h4>Slice Pipe</h4>
+    <b>{{months|slice:2:6}}</b>
+    </div>
  <div>Months <select (change)="changeDropdown($event)">
    <option *ngFor="let i of months">{{i}}</option>
  </select> </div>
@@ -12,8 +31,11 @@
  <ng-template #customize1>visible1</ng-template>
  <ng-template #customize2>visible2</ng-template>
  <button (click)="showContent($event)">click</button>
-</div>
 
+</div>
+<h2>Custom Pipe</h2>
+<b>Square Root of 25 is: {{25|appSqrt}}</b><br/>
+<b>Square Root of 5 is: {{5|appSqrt}}</b>
 
 <app-new-cmp></app-new-cmp>
 

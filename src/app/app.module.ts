@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NewCmpComponent,
-    ChangeTextDirective
+    ChangeTextDirective,
+    SqrtPipe
   ],
   imports: [
     BrowserModule

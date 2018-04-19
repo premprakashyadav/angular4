@@ -10,6 +10,8 @@ export class AppComponent {
   months = ['Jan' , 'Feb' , 'March' , 'April' , 'May' , 'June' , 'July' , 'Aug' , 'Sep', 'Oct', 'Nov' , 'Dec'];
   isVisible = true;
   isVisible1 = true;
+  todaydate = new Date();
+  jsonVal = {'id': '1', 'name': 'Prem', 'Add': {'no': '3', 'area': 'Malad' } };
   showContent(event) {
     console.log(event);
 
